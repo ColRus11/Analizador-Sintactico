@@ -49,9 +49,9 @@ Debe mostrar:
 
 ---
 
-## Restricciones
+## Restricciones que se tuvieron en cuenta
 
-No se deben utilizar herramientas que hagan parsing automático como:
+No se utilizaron herramientas que hagan parsing automático como:
 
 - BISON
 - NLTK.py
@@ -68,7 +68,7 @@ No se deben utilizar herramientas que hagan parsing automático como:
 
 ### Instalaciones necesarias
 
-Antes de correr el proyecto, asegúrate de tener instalado:
+Antes de correr el proyecto, asegúrese de tener instalado:
 
 python3 --version
 # Debe mostrar Python 3.10.x o superior
@@ -78,7 +78,7 @@ En caso de no tenerlo instalado:
 sudo apt update
 sudo apt install python3
 
-### Cómo ejecutar el proyecto
+### proceso de ejecucion del proyecto
 
 1. Colocar los archivos lexico.py, sintactico.py, ejemplo.py y main.py en la misma carpeta.
 2. Ejecutar el main desde la terminal:
