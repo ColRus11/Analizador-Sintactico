@@ -33,7 +33,14 @@ class Parser:
 
     def error(self, token, esperados):
         lexema = f'"{token.valor}"'
-        esperados_str = ", ".join(f'"{e}"' for e in esperados)
+        esperados_dic = []
+        for j in esperados:
+            if j in dic_simbolos:
+                esperados_dic.append(f'"{dic_simbolos[j]}"')
+            else:
+                esperados_dic.append(f'"{j}"')
+
+        esperados_str = ", ".join(esperados_dic)
         mensaje = f"<{token.fila},{token.columna}> Error sintactico: se encontro: {lexema}; se esperaba: {esperados_str}."
         raise SyntaxError(mensaje)
 
@@ -308,3 +315,26 @@ def leer_tokens(scanner):
     tokens = scanner.tokens[:]
     tokens.append(Token("EOF", "EOF", -1, -1))
     return tokens
+
+
+dic_simbolos= {
+    "tk_paren_izq": "(",
+    "tk_paren_der": ")",
+    "tk_lizq": "[",
+    "tk_lder": "]",
+    "tk_coma": ",",
+    "tk_punto": ".",
+    "tk_dos_puntos": ":",
+    "tk_asig": "=",
+    "tk_igualdad": "==",
+    "tk_diferencia": "!=",
+    "tk_suma": "+",
+    "tk_resta": "-",
+    "tk_mult": "*",
+    "tk_div": "/",
+    "tk_ejecuta": "->",
+    "tk_mayor_que": ">",
+    "tk_menor_que": "<",
+    "tk_mayor_igual": ">=",
+    "tk_menor_igual": "<=",
+}

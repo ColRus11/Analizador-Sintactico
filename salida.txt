@@ -1,1 +1,1 @@
-El analisis sintactico ha finalizado exitosamente.
+<1,8> Error sintactico: se encontro: "="; se esperaba: "id", "tk_entero", "tk_cadena", "True", "False", "None", "str", "int", "float", "bool".

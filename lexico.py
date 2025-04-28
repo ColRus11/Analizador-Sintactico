@@ -4,7 +4,7 @@ class Token:
     def __init__(self, tipo, valor, fila, columna):
         self.tipo = tipo
         self.valor = valor
-        self.fila = fila
+        self.fila = fila 
         self.columna = columna
 
     def __repr__(self):
@@ -94,6 +94,7 @@ class Scanner:
         return self.tokens.pop(0) if self.tokens else Token("EOF", "EOF", -1, -1)
 
     def get_tokens(self):
+        print(list(self.tokens))
         return list(self.tokens)
 
 
